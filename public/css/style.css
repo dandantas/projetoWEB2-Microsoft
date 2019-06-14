@@ -1,0 +1,453 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 600;
+    white-space: normal;
+    padding: 1px 12px 2px 0;
+    margin: 37px 0 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+ul li {
+    display: inline-block;
+}
+
+@media only screen and (max-width:1084) {
+    .wrapper {
+        margin: 0 auto;
+        max-width: 100%;
+    }
+    .header {
+        margin: 0 auto;
+        position: relative;
+        box-sizing: border-box;
+    }
+}
+
+@media only screen and (min-width: 1084px) {
+    .wrapper {
+        margin: 0 auto;
+        max-width: 90%;
+    }
+    .header {
+        margin: 0 auto;
+        padding: 0;
+        position: relative;
+        display: block;
+        box-sizing: border-box;
+    }
+}
+
+.header {
+    position: relative;
+}
+
+.imagem {
+    width: 100%;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+.imagem img {
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+    bottom: 5px;
+}
+
+.section {
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media only screen and (min-width: 770px) {
+    .header-content {
+        background-color: rgba(255, 255, 255, 0);
+        width: 32.5%;
+        color: white;
+        position: absolute;
+        top: 25%;
+        right: 5%;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    .header-content {
+        background-color: rgb(51, 51, 51);
+        text-align: center;
+        width: auto;
+        color: white;
+        padding: 15% 2.5%;
+    }
+    .imagem{
+        background-color: rgb(51, 51, 51);
+    }
+}
+
+@media only screen and (min-width: 1420px) {
+    .header-content h2 {
+        font-weight: 600;
+        font-size: 46px;
+    }
+}
+
+@media only screen and (max-width: 1420px) {
+    .header-content h2 {
+        font-weight: 600;
+        font-size: 24px;
+    }
+}
+
+.header-content-text {
+    margin-bottom: 5px;
+}
+
+.link-effect {
+    display: inline-block;
+    font-weight: 600;
+    color: black;
+    background-color: white;
+    padding: 10px;
+}
+
+.link-effect span {
+    margin-right: 10px;
+    font-weight: 600;
+    border-bottom: 0px solid;
+    padding-bottom: 2px;
+    transition: all .3s;
+}
+
+.link-effect span:hover {
+    border-bottom: 2px solid;
+    margin-right: 15px;
+}
+
+@media only screen and (min-width: 1084px) {
+    .content {
+        display: block;
+        float: left;
+        width: 25%;
+        padding: 32px 12px;
+        box-sizing: border-box;
+    }
+    .content:first-child {
+        padding-left: 0;
+    }
+    .content:last-child {
+        padding-right: 0;
+    }
+    .img-hover {
+        width: 100%;
+    }   
+}
+
+@media only screen and (max-width: 540px) {
+    .content {
+        float: none;
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 10%;
+    }
+    .img-hover {
+        width: 100%;
+    }
+    .section{
+        padding-top: 0;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+@media only screen and (min-width: 540px) and (max-width: 1084px) {
+    .content {
+        float: left;
+        width: 50%;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 5%;
+        box-sizing: border-box;
+    }
+    
+    .img-hover {
+        width: 100%;
+    }
+    .section{
+        padding-top: 0;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+.content p {
+    padding: 2px 2px 0 0;
+}
+
+.content img {
+    width: 100%;
+    height: auto;
+}
+
+.img-hover {
+    opacity: 1;
+    transition: all .3s .1s;
+}
+
+.img-hover:hover {
+    opacity: 0.85;
+}
+
+.content a span {
+    display: inline-block;
+    color: hsl(206, 100%, 36%);
+    text-decoration: none;
+    margin-right: 10px;
+    font-weight: 600;
+    border-bottom: 0px solid;
+    padding-bottom: 2px;
+    transition: all .3s;
+}
+
+.content a span:hover {
+    border-bottom: 2px solid;
+    margin-right: 15px;
+}
+
+.content a {
+    display: inline-block;
+    font-weight: 600;
+    color: hsl(206, 100%, 36%);
+    text-decoration: none;
+}
+
+
+.navbar {
+    margin: 0 auto;
+    height: 54px;
+}
+.logo {
+    padding: 14px 6px 12px 10px;
+    float: left;
+}
+.logo img {
+    width: 108px;
+}
+.menu {
+    float: left;
+    height: 100%;
+    width: 55%;
+}
+.menu ul li:first-child a {
+    padding-left: 22px;
+}
+.menu ul li a {
+    padding: 20px 8px 10px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #262626;
+    display: inline-block;
+}
+.nav-right {
+    float: right;
+    height: 100%;
+    width: 440px;
+}
+.nav-right ul {
+    height: 54px;
+
+}
+.nav-right ul li {
+    height: 40px;
+}
+.nav-right ul li a {
+    font-size: 13px;
+    font-weight: 400;
+    padding-top: 20px;
+    float: left;
+}
+.todamicrosoft {
+    color: #262626;
+    padding-right: 26px;
+    padding-left: 8px;
+    margin-right: 5px;
+}
+.todamicrosoft::after {
+    content: "";
+    padding-top: 20px;
+    border: solid #262626;
+    border-width: 0px 0.1px 0.1px 0px;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    position: relative;
+    bottom: 2px;
+    left: 8px;
+}
+.buscar {
+    color: rgba(0, 0, 0, 0.843);
+    /* float: left; */
+    /* padding: 11px 0px 0px 15px; */
+}
+.buscar-icone {
+    float: right;
+    position: relative;
+    top: 14px;
+    left: 2px;
+}
+.buscar-icone img {
+    padding-right: 25px;
+}
+.carrinho {
+    color: rgba(0, 0, 0, 0.9);
+}
+.carrinho-icone {
+    float: right;
+    position: relative;
+    top: 14px;
+    left: 2px;
+}
+.entrar {
+    font-family: Arial !important;
+    color: #333333;
+    padding-left: 20px;
+    padding-top: 25px;
+    font-size: 15px !important;
+}
+.entrar-icone {
+    float: right;
+    width: 36px;
+    height: 36px;
+    position: relative;
+    top: 8px;
+    left: 13px
+}
+.menu-responsivo {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    background: rgba(0, 0, 0, 0.8);
+    width: 20px;
+    height: 1.5px;
+    top: 30px;
+    left: 15px;
+}
+.menu-responsivo::before, .menu-responsivo::after {
+    background: rgba(0, 0, 0, 0.8);
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.menu-responsivo::before {
+    top: -5px;
+}
+
+.menu-responsivo::after {
+    bottom: -5px;
+}
+
+/* ul li:hover {
+    border-bottom: 2px solid;
+    width: calc(100% - 16px);
+} */
+
+@media only screen and (max-width: 1420px) {
+    .buscar {
+        display: none;
+    }
+    .carrinho {
+        display: none;
+    }
+    .entrar {
+        display: none;
+    }
+    .menu {
+        width: 45%;
+    }
+    .nav-right {
+        width: 280px;
+    }
+    /* .nav-right ul {
+        padding-left: 5%;
+    } */
+    .todamicrosoft {
+        padding-right: 30px;
+    }
+    .buscar-icone img {
+        padding-right: 15px;
+    }
+}
+
+@media only screen and (max-width: 1084px) {
+    .navbar {
+        padding: 0 24px;
+    }
+}
+
+@media only screen and (max-width: 859px) {
+    .todamicrosoft {
+        display: none;
+    }
+    .menu {
+        display: none;
+    }
+    .navbar {
+        padding: 0px;
+    }
+    .logo {
+        float: none;
+        display: inline-block;
+        padding: 12px 4px;
+        /* margin: 0 50%; */
+        height: auto;
+        position: absolute;
+        left: calc(50% - 60px);
+    }
+    .nav-right {
+        width: calc(100% - 50px);
+        clear: both;
+    }
+    .nav-right ul {
+        float: right;
+    }
+    .entrar-icone {
+        padding: 6px 10px;
+        left: 0px;
+        top: 4px;
+    }
+    .carrinho-icone {
+        padding: 0px 12px;
+        /* right: 55px; */
+    }
+    .buscar-icone {
+        position: absolute;
+        top: 15px;
+        left: 60px;
+        vertical-align: sub;
+    }
+    .menu-responsivo {
+        display: block;
+    }
+}
