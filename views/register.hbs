@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="../public/css/style.css" />
+    <link rel="shortcut icon" href="../public/images/favicon.png" />
+    <script src="../public/js/script.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="modal-content" id="modalLogin">
+        <div id="cadastro">
+            <form method="POST" action="./register">
+                <h1>Cadastro</h1>
+
+                <p>
+                    <label for="nome_cad">Seu nome</label>
+                    <input id="nome_cad" name="nome_cad" required="required" type="text" placeholder="Luiz Augusto" />
+                </p>
+
+                <p>
+                    <label for="email_cad">Seu e-mail</label>
+                    <input id="email_cad" name="email_cad" required="required" type="email"
+                        placeholder="contato@htmlecsspro.com" />
+                </p>
+
+                <p>
+                    <label for="senha_cad">Sua senha</label>
+                    <input id="senha_cad" name="senha_cad" required="required" type="password" placeholder="1234" />
+                </p>
+
+                <p>
+                    <input type="submit" name="enviar" value="Cadastrar" />
+                </p>
+
+                <p class="link">
+                    Já tem uma conta?
+                    <a href="./" method="GET"> Retornar </a>
+                </p>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
