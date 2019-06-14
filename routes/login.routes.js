@@ -5,15 +5,14 @@ var router = express.Router();
 module.exports = router=>{
     
     router.get('/', (req, res,next)=>{
-        
-        if(req.cookies && req.cookies.login){
+        var admin = "admin"
+        if(req.cookies && req.cookies.login === admin){
             res.render('home', {
                 user: req.cookies.login
             });
-            console.log('pagina admin');
             return;
         }else{
-            res.render('home');
+            res.render('home',{});
         }
     });
 
