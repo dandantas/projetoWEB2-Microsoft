@@ -43,43 +43,31 @@ module.exports =
             });
         }
 
-        static delete(obj){
+        static findUser(usuario){
             return client.connect(uri, (err,db)=>{
-                if(err) throw err;
                 var dbo = db.db('microsoft');
-                //deleting an article
-                dbo.collection('articles').deleteOne({"title" : obj});
+                dbo.collection('users').find({user: usuario}).toArray(function(err,result){
+                    if(err) console.log(err);
+                    console.log(result);
+                });
             });
+        }
+
+
+
+
+        static findArticle(titulo){
+            return client.connect(uri, (err,db)=>{
+                var dbo = db.db('microsoft');
+                dbo.collection('articles').find({title: titulo}).toArray(function(err,result){
+                    if(err) console.log(err);
+                    console.log(result);
+                });
+            });
+
         }
 
         
-
-        static findUser(obj){
-            return client.connect(uri, (err,db)=>{
-                if(err) throw err;
-                var dbo = db.db('microsoft');
-                //searching for an specific article
-                dbo.collection('users').find({"user" : obj}, (err,res)=>{
-                    if(err) throw err;
-                    console.log(obj);
-                });
-            });
-        }
-
-
-
-
-        static findArticle(title){
-            return client.connect(uri, (err,db)=>{
-                if(err) throw err;
-                var dbo = db.db('microsoft');
-                //searching for an specific article
-                dbo.collection('articles').find({"title" : title}, (err,res)=>{
-                    if(err) throw err;
-                });
-                console.log(title);
-            });
-        }
         static insertArticle(obj){
             return client.connect(uri, function(err,db){
                 if(err) throw err;
@@ -93,14 +81,6 @@ module.exports =
             
 
         }
-        static list() {
-            return client.connect(uri , { useNewUrlParser: true }).then((client) => {
-                let db = client.db('microsoft');
-                return db.collection('articles')
-                    .find()
-                    .sort({ title: 1 })
-                    .toArray();
-
-            }).catch((err) => {throw err;});
-        }
+       
     }
+    

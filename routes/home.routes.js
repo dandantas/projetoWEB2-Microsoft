@@ -1,9 +1,11 @@
 let userDao = require('../libs/database');
 var express = require('express');
 var router = express.Router();
-var test = require('../libs/middlewares');
-let articleModel= require('../models/articles');
+let articleModel= require('../models/articles'),
+    bodyParser = require('body-parser');    
+var jsonParser = bodyParser.json();
 
+var mongo = require('mongodb');
 
 module.exports = router=>{
     
@@ -48,12 +50,15 @@ module.exports = router=>{
     router.post('/login', (req,res,next)=>{
         let login = req.body.login,
             psw   = req.body.psw;
-
-            if(login == 'admin'){
+            if(login === 'admin' && psw === '1234'){
                 res.cookie('login', 'admin');
                 res.redirect('/');
                 return;
-                console.log('achou admin');
+            }else if(userDao.findUser(login)){
+                console.log('user succefully logged!');
+                res.redirect('/');
+                return;
+            
             }else{
                 res.status(403);
                 console.log('not admin');
@@ -76,12 +81,20 @@ module.exports = router=>{
         res.end();
     });
 
-    router.post('/search', (req,res)=>{
+    router.post('/search', jsonParser ,(req,res)=>{
         var title = req.body.search;
-        var obj = userDao.findArticle(title);
-        res.render('search', {
-            article : obj
-        });        
+        var aux = userDao.findArticle(title);
+        console.log(aux);
+        /* if(obj != null){
+            res.render('search',{
+                article: obj
+            });
+        } */
+         res.render('search');
+
+         
+    
+
     });
 
 
