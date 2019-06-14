@@ -30,14 +30,26 @@
             </nav>
             <div class="nav-right">
                 <ul>
+                    {{#if user}}
+                    <li>
+                        <button id="myBtn2">
+                            <div class="add-icone">
+                                <img src="./images/add.png" alt="">
+                            </div>
+                        </button>
+                    </li>
+                    {{/if}}
                     <li><a href="#" class="todamicrosoft">Toda a Microsoft</a></li>
                     <li>
-                        <a href="#" class="buscar">Buscar</a>
-                        <div class="buscar-icone">
+                        <form id="demo-2" action="/search" method="POST">
+                            <input type="search" name="search" placeholder="Search">
                             <img src="./images/search.png">
-                        </div>
+                        <a href="#" class="buscar">Buscar</a>
+                        <!-- <div class="buscar-icone">
+                            
+                        </div> -->
+                        </form>
                     </li>
-                    <li>
                         <a href="#" class="carrinho">Carrinho</a>
                         <div class="carrinho-icone">
                             <img src="./images/carrinho.png">
@@ -84,20 +96,20 @@
                     <div class="modal-content" id="modalLogin">
                         <span class="close2">&times;</span>
                         <div id="login">
-                            <form method="post" action="">
+                            <form method="POST" action="./insert">
                                 <h1>Cadastrar Item</h1>
-                                <p> 
+                                {{!-- <p> 
                                     <label for="arquivo_add">Arquivo</label>
-                                    <input id="arquivo_add" name="arquivo_add" required="required" type="text" placeholder=""/>
-                                </p>
+                                    <input id="arquivo_add" name="image" required="required" type="file" placeholder=""/>
+                                </p> --}}
                                     
                                 <p> 
                                     <label for="titulo_add">Título</label>
-                                    <input id="titulo_add" name="titulo_add" required="required" type="text" placeholder="" /> 
+                                    <input id="titulo_add" name="title" required="required" type="text" placeholder="" /> 
                                 </p>
                                 <p> 
                                     <label for="descricao_add">Descrição</label>
-                                    <input id="descricao_add" name="descricao_add" required="required" type="text" placeholder="" /> 
+                                    <input id="descricao_add" name="description" required="required" type="text" placeholder="" /> 
                                 </p>                                    
                                 <p> 
                                     <input type="submit" value="Cadastrar" /> 
@@ -134,7 +146,7 @@
                 <a href="" class="header-link link-effect"><span>COMPRE AGORA</span>></a>
             </div>
         </div>
-        {{#if user}}
+        
         <div class="section clearfix">
             <div class="content">
                 <a class="img-hover" href=""><img src="./images/smallImage-1.png" alt="Xbox One S"></a>
@@ -160,8 +172,18 @@
                 <p>Jogue os novos e exclusivos títulos do Xbox One e mais de 100 outros jogos incríveis.</p>
                 <a href=""><span>ASSINE AGORA</span>></a>
             </div>
+            {{#each article}}
+            <div class="content">
+                <!--<a class="img-hover" href=""><img src="./images/smallImage-4.png" alt="Xbox Game Pass"></a>-->
+                <h3 class="content-heading">{{this.title}}</h3>
+                <p>{{this.description}}</p>
+                <a href=""><span>ASSINE AGORA</span>></a>
+            </div>
+            {{/each}}
+            
+
         </div>
-        {{/if}}
+        
     </div>
 
      <script src="./js/script.js"></script>
