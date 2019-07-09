@@ -153,9 +153,9 @@
                 <form action="./search" method="get">
                     <p>
                         <label for="busca">Nome</label>
-                        <input id="busca" name="article" type="search" placeholder="busca" list="lista_pesquisa"/>
+                        <input id="busca" name="article" type="search" placeholder="busca" list="lista_pesquisa" />
                         <button type="search" id="buscar">Buscar</button>
-                        
+
                     </p>
                     <datalist id="lista_pesquisa"></datalist>
                 </form>
@@ -163,7 +163,9 @@
         </div>
 
 
-        <div class="section clearfix"  id="articles" >
+        <div class="section clearfix">
+
+        <div class="section clearfix" >
             <div class="content">
                 <a class="img-hover" href=""><img src="./images/smallImage-1.png" alt="Xbox One S"></a>
                 <h3 class="content-heading">Xbox One S</h3>
@@ -188,6 +190,15 @@
                 <p>Jogue os novos e exclusivos títulos do Xbox One e mais de 100 outros jogos incríveis.</p>
                 <a href=""><span>ASSINE AGORA</span>></a>
             </div>
+
+            <div class="content" id="articles">
+
+            </div>
+            <div id="progresso">
+                <progress id="progress" value="0"></progress>
+                <span id="display"></span>
+            </div>
+
         {{!-- {{#if show}}
             {{#each article}}
             <div class="content" >
@@ -198,6 +209,7 @@
             </div>
             {{/each}}
         {{/if}} --}}
+
 
 
         </div>
@@ -211,6 +223,6 @@
 </html>
 <script>
 
-    
+
 
 </script>
