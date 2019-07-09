@@ -9,6 +9,7 @@ var mongo = require("mongodb");
 
 module.exports = router => {
   router.get("/", (req, res, next) => {
+      console.log('requisicao para home');
     if (req.cookies && req.cookies.login) {
       articleModel.find((err, articles) => {
         if (err) throw err;
@@ -87,6 +88,15 @@ module.exports = router => {
     })
     .catch(err=>{
         console.log(err);
+    });
+  });
+
+
+  router.get('/articles', (req, res)=>{
+    articleModel.find((err, result)=>{
+        if(err) res.send(err);
+
+        res.json(result);
     });
   });
 };

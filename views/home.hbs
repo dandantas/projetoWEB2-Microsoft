@@ -116,7 +116,7 @@
                                         placeholder="" />
                                 </p>
                                 <p>
-                                    <input type="submit" value="Cadastrar" />
+                                    <input id="insertArticle" type="submit" value="Cadastrar" />
                                 </p>
                             </form>
                         </div>
@@ -125,6 +125,8 @@
 
             </div>
         </div>
+
+        <div id="prog"></div>
 
         <div class="header">
             <div class="imagem">
@@ -156,16 +158,17 @@
                 <form action="./search" method="get">
                     <p>
                         <label for="busca">Nome</label>
-                        <input id="busca" name="article" type="search" placeholder="busca" />
-                        <button type="submit">Buscar</button>
+                        <input id="busca" name="article" type="search" placeholder="busca" list="lista_pesquisa"/>
+                        <button type="search" id="buscar">Buscar</button>
+                        
                     </p>
-
+                    <datalist id="lista_pesquisa"></datalist>
                 </form>
             </li>
         </div>
 
 
-        <div class="section clearfix">
+        <div class="section clearfix" id="articles">
             <div class="content">
                 <a class="img-hover" href=""><img src="./images/smallImage-1.png" alt="Xbox One S"></a>
                 <h3 class="content-heading">Xbox One S</h3>
@@ -205,6 +208,12 @@
     </div>
 
     <script src="./js/script.js"></script>
+    <script src="./js/ajax.js"></script>
 </body>
 
 </html>
+<script>
+
+    
+
+</script>
