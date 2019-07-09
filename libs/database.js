@@ -53,18 +53,17 @@ module.exports =
             });
         }
 
-
-
-
+       
         static findArticle(titulo){
-            return client.connect(uri, (err,db)=>{
-                var dbo = db.db('microsoft');
-                dbo.collection('articles').find({title: titulo}).toArray(function(err,result){
-                    if(err) console.log(err);
-                    console.log(result);
+            return new Promise(function(resolve, reject){
+                client.connect(uri, (err,db)=>{
+                    var dbo = db.db('microsoft');
+                    dbo.collection('articles').find({title: titulo}).toArray((err,result)=>{
+                        if(err) reject(err);
+                        resolve(result);
+                    });
                 });
             });
-
         }
 
         
