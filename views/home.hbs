@@ -13,7 +13,6 @@
 
 <body>
     <div class="wrapper">
-
         <div class="navbar clearfix">
             <span class="menu-responsivo"></span>
             <a href="index.html" class="logo">
@@ -100,10 +99,6 @@
                         <div id="login">
                             <form method="POST" action="./insert">
                                 <h1>Cadastrar Item</h1>
-                                {{!-- <p> 
-                                    <label for="arquivo_add">Arquivo</label>
-                                    <input id="arquivo_add" name="image" required="required" type="file" placeholder=""/>
-                                </p> --}}
 
                                 <p>
                                     <label for="titulo_add">Título</label>
@@ -168,7 +163,7 @@
         </div>
 
 
-        <div class="section clearfix" id="articles">
+        <div class="section clearfix"  id="articles" >
             <div class="content">
                 <a class="img-hover" href=""><img src="./images/smallImage-1.png" alt="Xbox One S"></a>
                 <h3 class="content-heading">Xbox One S</h3>
@@ -193,14 +188,16 @@
                 <p>Jogue os novos e exclusivos títulos do Xbox One e mais de 100 outros jogos incríveis.</p>
                 <a href=""><span>ASSINE AGORA</span>></a>
             </div>
+        {{!-- {{#if show}}
             {{#each article}}
-            <div class="content">
+            <div class="content" >
                 <!--<a class="img-hover" href=""><img src="./images/smallImage-4.png" alt="Xbox Game Pass"></a>-->
                 <h3 class="content-heading">{{this.title}}</h3>
                 <p>{{this.description}}</p>
                 <a href=""><span>SAIBA MAIS</span>></a>
             </div>
             {{/each}}
+        {{/if}} --}}
 
 
         </div>

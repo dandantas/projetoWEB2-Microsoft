@@ -65,6 +65,17 @@ module.exports =
                 });
             });
         }
+        static findAllArticles(){
+            return new Promise(function(resolve, reject){
+                client.connect(uri, (err,db)=>{
+                    var dbo = db.db('microsoft');
+                    dbo.collection('articles').find({}).toArray((err,result)=>{
+                        if(err) reject(err);
+                        resolve(result);
+                    });
+                });
+            });
+        }
 
         
         static insertArticle(obj){

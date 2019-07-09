@@ -15,7 +15,8 @@ module.exports = router => {
         if (err) throw err;
         res.render("home", {
           article: articles,
-          user: req.cookies.login
+          user: req.cookies.login,
+          show: false
         });
       });
       return;
@@ -81,10 +82,14 @@ module.exports = router => {
     userDao.findArticle(article)
     .then(result=>{
         console.log(result);
-        if(result.length > 0 )
-            res.render('search', {encontrou: true, resultado: result});    
-        else
-            res.render('search', {encontrou: false, resultado: result});
+        if(result.length > 0 ){
+          res.send(result);
+            //res.render('search', {encontrou: true, resultado: result});    
+        }    
+        else {
+          res.send(result);
+        }
+            //res.render('search', {encontrou: false, resultado: result});
     })
     .catch(err=>{
         console.log(err);
@@ -92,11 +97,22 @@ module.exports = router => {
   });
 
 
-  router.get('/articles', (req, res)=>{
+/*   router.get('/articles', (req, res)=>{
     articleModel.find((err, result)=>{
         if(err) res.send(err);
-
-        res.json(result);
+        res.render("home", {
+          article: result,
+          show: false,
+          user: req.cookies.login
+        });
+        
     });
+  }); */
+
+  router.get('/articles', (req,res) => {
+    articleModel.find((err, articles) => {
+        if (err) throw err;
+        res.send(articles);
+        });
   });
 };
