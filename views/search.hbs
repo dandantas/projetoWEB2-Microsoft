@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
     <h1>RESULTADOS DA PESQUISA:</h1>
     {{#if encontrou}}
-        <li>{{resultado.title}}</li>
-        <p>{{resultado.description}}</p>
+        {{#each resultado}}
+    <div class="content">
+        <!--<a class="img-hover" href=""><img src="./images/smallImage-4.png" alt="Xbox Game Pass"></a>-->
+        <h3>Titulo: {{this.title}}</h3>
+        <p>Descrição: {{this.description}}</p>
+
+    </div>
+        {{/each}}
     {{else}}
-        <h3>Nenhum resultado encontrado</h3>
+    <h3>Nenhum resultado encontrado</h3>
     {{/if}}
 </body>
+
 </html>
