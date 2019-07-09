@@ -80,8 +80,10 @@ module.exports = router => {
     userDao.findArticle(article)
     .then(result=>{
         console.log(result);
-        res.render('search', {encontrou: true, resultado: result});    
-       
+        if(result.length > 0 )
+            res.render('search', {encontrou: true, resultado: result});    
+        else
+            res.render('search', {encontrou: false, resultado: result});
     })
     .catch(err=>{
         console.log(err);
