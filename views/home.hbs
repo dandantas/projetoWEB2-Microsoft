@@ -29,7 +29,7 @@
             </nav>
             <div class="nav-right">
                 <ul>
-                    {{#if user}}
+                   
                     <li>
                         <button id="myBtn2">
                             <div class="add-icone">
@@ -37,18 +37,7 @@
                             </div>
                         </button>
                     </li>
-                    {{/if}}
                     <li><a href="#" class="todamicrosoft">Toda a Microsoft</a></li>
-                    {{!-- <li>
-                        <form id="demo-2" action="./search" method="GET">
-                            <input type="search" name="search" placeholder="Search">
-                            <img src="./images/search.png">
-                        <a href="#" class="buscar">Buscar</a>
-                        <!-- <div class="buscar-icone">
-                            
-                        </div> -->
-                        </form>
-                    </li> --}}
                     <a href="#" class="carrinho">Carrinho</a>
                     <div class="carrinho-icone">
                         <img src="./images/carrinho.png">
@@ -165,59 +154,47 @@
 
         <div class="section clearfix">
 
-        <div class="section clearfix" >
-            <div class="content">
-                <a class="img-hover" href=""><img src="./images/smallImage-1.png" alt="Xbox One S"></a>
-                <h3 class="content-heading">Xbox One S</h3>
-                <p>O melhor sistema de jogos e entretenimento 4K.</p>
-                <a href=""><span>SAIBA MAIS</span>></a>
-            </div>
-            <div class="content">
-                <a class="img-hover" href=""><img src="./images/smallImage-2.png" alt="Atualização do Windows 10"></a>
-                <h3 class="content-heading">Atualização do Windows 10</h3>
-                <p>A atualização de outubro permite que você tire o máximo de proveito do seu tempo</p>
-                <a href=""><span>SAIBA MAIS</span>></a>
-            </div>
-            <div class="content">
-                <a class="img-hover" href=""><img src="./images/smallImage-3.png" alt="Microsoft Store"></a>
-                <h3 class="content-heading">Microsoft Store</h3>
-                <p>Encontre o que você precisa para sua casa, ecola, trabalho e diversão.</p>
-                <a href=""><span>COMPRE AGORA</span>></a>
-            </div>
-            <div class="content">
-                <a class="img-hover" href=""><img src="./images/smallImage-4.png" alt="Xbox Game Pass"></a>
-                <h3 class="content-heading">Xbox Game Pass</h3>
-                <p>Jogue os novos e exclusivos títulos do Xbox One e mais de 100 outros jogos incríveis.</p>
-                <a href=""><span>ASSINE AGORA</span>></a>
-            </div>
+            <div class="section clearfix">
+                <div class="content">
+                    <a class="img-hover" href=""><img src="./images/smallImage-1.png" alt="Xbox One S"></a>
+                    <h3 class="content-heading">Xbox One S</h3>
+                    <p>O melhor sistema de jogos e entretenimento 4K.</p>
+                    <a href=""><span>SAIBA MAIS</span>></a>
+                </div>
+                <div class="content">
+                    <a class="img-hover" href=""><img src="./images/smallImage-2.png"
+                            alt="Atualização do Windows 10"></a>
+                    <h3 class="content-heading">Atualização do Windows 10</h3>
+                    <p>A atualização de outubro permite que você tire o máximo de proveito do seu tempo</p>
+                    <a href=""><span>SAIBA MAIS</span>></a>
+                </div>
+                <div class="content">
+                    <a class="img-hover" href=""><img src="./images/smallImage-3.png" alt="Microsoft Store"></a>
+                    <h3 class="content-heading">Microsoft Store</h3>
+                    <p>Encontre o que você precisa para sua casa, ecola, trabalho e diversão.</p>
+                    <a href=""><span>COMPRE AGORA</span>></a>
+                </div>
+                <div class="content">
+                    <a class="img-hover" href=""><img src="./images/smallImage-4.png" alt="Xbox Game Pass"></a>
+                    <h3 class="content-heading">Xbox Game Pass</h3>
+                    <p>Jogue os novos e exclusivos títulos do Xbox One e mais de 100 outros jogos incríveis.</p>
+                    <a href=""><span>ASSINE AGORA</span>></a>
+                </div>
 
-            <div class="content" id="articles">
+                <div class="content" id="articles">
+
+                </div>
+                <div id="progresso">
+                    <progress id="progress" value="0"></progress>
+                    <span id="display"></span>
+                </div>
 
             </div>
-            <div id="progresso">
-                <progress id="progress" value="0"></progress>
-                <span id="display"></span>
-            </div>
-
-        {{!-- {{#if show}}
-            {{#each article}}
-            <div class="content" >
-                <!--<a class="img-hover" href=""><img src="./images/smallImage-4.png" alt="Xbox Game Pass"></a>-->
-                <h3 class="content-heading">{{this.title}}</h3>
-                <p>{{this.description}}</p>
-                <a href=""><span>SAIBA MAIS</span>></a>
-            </div>
-            {{/each}}
-        {{/if}} --}}
-
-
 
         </div>
 
-    </div>
-
-    <script src="./js/script.js"></script>
-    <script src="./js/ajax.js"></script>
+        <script src="./js/script.js"></script>
+        <script src="./js/ajax.js"></script>
 </body>
 
 </html>

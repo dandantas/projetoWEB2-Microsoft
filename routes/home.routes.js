@@ -10,7 +10,7 @@ var mongo = require("mongodb");
 module.exports = router => {
   router.get("/", (req, res, next) => {
       console.log('requisicao para home');
-    if (req.cookies && req.cookies.login) {
+    //if (req.cookies && req.cookies.login) {
       articleModel.find((err, articles) => {
         if (err) throw err;
         res.render("home", {
@@ -21,8 +21,8 @@ module.exports = router => {
         });
       });
       return;
-    }
-    res.redirect("/login");
+    //}
+    //res.redirect("/login");
     res.end();
   });
 
